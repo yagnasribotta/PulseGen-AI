@@ -52,11 +52,11 @@ if app_mode == "Chat Assistant":
 
     # Chat input
     if prompt := st.chat_input("Ex: What are the best metrics for BP prediction?"):
-        st.session_state.messages.append({"role": "user", "content": prompt})
+        
         with st.chat_message("user"):
             st.markdown(prompt)
 
-        with st.chat_message("assistant"):
+      
             if not API_KEY:
                 response_text = "API Key missing. Please check app.py."
             else:
